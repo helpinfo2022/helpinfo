@@ -1,0 +1,203 @@
+https://letpy.com/handbook/datetime/   - справочник
+altooro.com 
+http://tradebenefit.ru/primery-mysql-zaprosov
+===
+
+ SELECT * FROM worker;
+mysql команды   agile jira git установить
+mysql> SELECT * FROM worker WHERE salary > 6000;
+SELECT * FROM worker WHERE dept = 'IT';
+insert into name_table (site, description) values ('sitear.ru', 'Site
+update name_table set field = 'value' where id = '12'
+delete from name_table where id = '14'
+
+
+add_one = lambda x: x + 1
+print(add_one(2))
+
+lambda x: x + 1
+- S.startswith - проверяет есть ли в начале нужный стринг
+if isinstance(A, int)   проверяет обьект инт стринг возвращает тру или фалс
++ return str(bin(A)).count('1')    
+-bin в биты переводит   count('1')количество совпадение
++ S.find('b') ищет 
+len(A)  -количество знако в стринг
+s = {}  - словарь есть ключ
+S[i:]  
++ zip(A, D) соединяет
++ j.split разделяет
+append(i) добавляет в список обьект
+s.keys():  ключи от словаря
+elif   - иначе если
+
+while for continue
+() кортеж tuple как список хранит данные но нельзя менять
+[] - список list
+{} - словарь dictionary
+i[::-1]    - перевернуть значение
+Equals: a == b
+Not Equals: a != b
+a.update(b)    - словаря
+meal.pop('water', 3000) - удаляет из словаря элемент
+dict.get(key[, default]) - возвращает значение ключа
+dict.items() - возвращает пары (ключ, значение).
+dict.keys() - возвращает ключи в словаре.
+Возведение в степень (**)
+Деление без остатка (//)
+Деление по модулю (остаток от деления) (%)
+Меньше или равно (<=)         Равно (==)        Не равно (!=)
+Сложение и присваивание (+=)      a += 2
+and (и), or (или) и not (не).
+x = input()
+float(2.8)
+list(range(10))  list(range(2, 8))  диапозон чисел
+import datetime - секунды минуты дни
+dct['str_key'] = 12345
+Множество в python - "контейнер", содержащий не повторяющиеся элементы в случайном порядке.
+a = set()     a = {'a', 'b', 'c', 'd'}   \\  set(words)   {'hello', 'daddy', 'mum'}
+list.remove(element)     list.pop(index)      b = a[:]    (copy)
+x = input()
+myString.index('S')    - поиск индекса по названию элемента
+type(myString)    тип переменной
+myString = int("555")  тип данных поменять
+print(5 // 2)  деление без остатка
+print(10 % 3) показывает сколько осталось после деления
+break остановть pass пустышка
+	не равно	x != y
+from os import listdir   работа с файлами
+string = 'Python Software Foundation'    string.count('o')  количество повторений
+x, y = y, x  поменять местами переменные
+Python-лямбды — это маленькие анонимные функции
+return len(numbers) == len(set(numbers))   все значения в списке уникальны
+неизменяемое множество(frozenset) 
+range(18, 1, -4)  диапазон    [ 18, 14, 10, 6, 2 ]
+if my_str.islower(): my_str.capitalize()   большая буква
+my_str.find('сопровождать')  my_str.index('сопровождать')  поиск индекса по слову
+my_str.replace('сопровождать', 'поддерживать')   заменить
+filename[индекс + 1:]  возврат среза текста от по индексу вправа
+' '.join(lst)   соединяет разбитый текст в целое
+
+---
+def get_extension(filename):     маленькая буква
+class название_класса:     class Person:   большая буква
+   person1 = Person()       person1.display_info()
+def display_info(self):
+        print("Привет, меня зовут", self.name)
+from classes import Person, Auto
+---
+class Vehicle(object):
+    """docstring"""
+    
+    class Vehicle(object):
+    """docstring"""
+    
+    def __init__(self):
+        """Constructor"""
+        pass
+---
+
+f = open('text.txt', 'r')   i=f.read()   чтение и запись файла
+---
+b = "Hello, World!"   print(b[2:5])   - нарезка строки
+---
+a = "Hello, World!"    print(a.upper()) print(a.lower())  - верхние нижние буквы
+---
+print(a.strip()) # returns "Hello, World!"   - удаляет пробелы в начале конце
+---
+print(a.replace("H", "J")) - замена символа стринк
+---
+\"Vikings\" - взять в ковычки текст
+---
+capitalize() - первая большая буква
+---
+count() количество повторений
+find() ищет позицию стринг возвращает координату индекс
+index()   возврщает индекс по тексту заданному
+islower() - is в начале возвращает тру или фалс    i.islower()
+txt = "Hello World"  x = txt[0] получить первый элемент
+
+fruits = ["apple", "banana", "cherry"]  fruits[0] = "kiwi" - заменить значение
+fruits = ["apple", "banana", "cherry"]  fruits.insert(1,"lemon") - добавить вконцертное мест
+fruits.remove("banana") - найти и удалить элемент
+---
+fruits = {"apple", "banana", "cherry"}
+more_fruits = ["orange", "mango", "grapes"]
+fruits.update(more_fruits) добавляет информацию из списка в другой
+---
+a, b = b, a   -  поменять местами переменные , или дополнительная переменная буфер
+---
+def shortcut(s):
+    for i in ["a","e","i","o","u"]:
+        if i in s:
+            s = s.replace(i,"")
+
+    return(s)
+----заменить буквы удалить гласные-----
+car.pop("brand")  - удаляет из словаря по ключу
+car.keys() - выводит все ключи словаря
+----random
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+print(list(filter(lambda elem: elem < 5, a)))
+----лямда пример----
+.sort()   - сортировка алфавитный поряток
+----
+pop() - удаляет элемент по указанному индексу
+---
+current_datetime = datetime.now()  - текущая дата
+---
+import datetime
+now = datetime.datetime.now()  now.year   now.day  now.second
+--- текущая дата время---
+today = datetime.date.today()
+---
+import time  local_time = local_time * 60  time.sleep(local_time)  print(text)
+--- таймер
+f = open('info.txt', 'r')
+# print(f.split(","))
+
+while True:
+    # считываем строку
+    line = f.readline()
+    # прерываем цикл, если строка пустая
+    if not line:
+        break
+    # выводим строку
+    print(line.strip().split(","))
+-----считатать по строчно текстовый файл-----
+
+if (num % 2) == 0:
+   print('even')
+------проверка четное число------
+
+if all(c.isdigit() or c.islower() for c in password):   если в скобках
+------
+word.istitle() первая буква большая
+------
+not in  если не
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

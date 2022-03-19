@@ -1,0 +1,96 @@
+https://httpbin.org/anything
+https://vc.ru/dev/155069-10-komand-curl-kotorye-vam-sleduet-znat
+
+export http_proxy="http://proxy_server_ip:8080"
+export http_proxy="http://192.168.1.78:port"
+
+"sec-ch-ua-platform: "Windows""
+
+curl -H "sec-ch-ua-platform: "Windows"" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" https://httpbin.org/anything
+====@@@
+
+====With proxy===
+curl -H "sec-ch-ua-platform: "Windows"" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" -x "http://tester5-cc-anymob:WMBRqqYcdGOa@gw.ntnt.io:8080" https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb
+
+====without proxy
+curl -H "sec-ch-ua-platform: "Windows"" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"  https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb
+
+curl -H "sec-ch-ua-platform: "Windows"" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"  https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb
+
+=====@@@
+curl https://www.amazon.com/gp/goldbox?ref_=nav_cs_gb
+
+curl https://2ip.ru
+===
+
+curl -H "sec-ch-ua-platform: "Windows"" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" -x "http://user:password@192.168.1.78:8080" https://httpbin.org/anything
+
+curl -H "sec-ch-ua-platform: "Windows"" -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" -x "http://192.168.1.78:8080" https://httpbin.org/anything
+
+===
+192.168.1.78
+
+curl -x "http://user:password@192.168.1.78:8080" https://losst.ru
+curl -x "http://user:password@proxy_server_ip:port" http://example.com
+
+ curl https://raw.githubusercontent.com/curl/curl/master/README.md
+
+
+ curl -o readme.txt https://raw.githubusercontent.com/curl/curl/master/README.md
+запись в файл
+
+curl -O https://raw.githubusercontent.com/curl/curl/master/README.md
+тоже имя
+
+ curl -O https://raw.githubusercontent.com/curl/curl/master/README.md -O https://raw.githubusercontent.com/curl/curl/master/README
+несколько файлов
+
+ curl -z 21-Dec-17 https://raw.githubusercontent.com/curl/curl/master/README.md -O https://raw.githubusercontent.com/curl/curl/master/README
+
+Данная команда скачает файл, только если он был изменен после 21 декабря 2017
+
+
+curl --limit-rate 50K -O https://cdn.kernel.org/pub/linux/kernel/v4.x/testing/linux-4.11-rc7.tar.xz
+
+curl -T login.txt ftp://speedtest.tele2.net/upload/
+отправка на фтп сервер
+
+curl -d "field1=val&fileld2=val1"http://posttestserver.com/post.php
+отправка пост данных
+
+ curl -F "password=@pass;type=text/plain" http://posttestserver.com/post.php
+
+
+ curl -I https://losst.ru
+заголовки
+
+
+ чтобы страница возвращалась только если она была изменена:
+ curl -I --header 'If-Modified-Since: Mon, 26 Dec 2016 18:13:12 GMT' https://losst.ru
+
+
+ curl -x proxysever.test.com:3128 http://google.co.in
+прокси использовать
+
+
+---
+
+
+curl -X POST(Get or whatever) \
+  http://your_url.com/api/endpoint \
+  -H 'Content-Type: application/json' \
+  -H 'header-element1: header-data1' \
+  -H 'header-element2: header-data2' \
+
+---
+192.168.1.78
+
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-ch-ua: " Not;A Brand";v="99", "Google Chrome";v="97", "Chromium";v="97"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36
+
+

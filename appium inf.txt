@@ -1,0 +1,14 @@
+JUnit testNG это фрейм ворк на джаве бибилиотека для тестов
+
+_TestNG
+XML 
+data-driven тестирования 
+
+android create avd -n <name> -t <targetID>
+emulator -avd <name>
+запуск эмулятора с консоли
+avd devices
+
+
+
+

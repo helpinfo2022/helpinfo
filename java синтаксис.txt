@@ -1,0 +1,74 @@
+Имя файла всегда идентично имени класса
+Обработка всегда начинается в main
+public static void main (String[] args);
+Обычно процедуры называются «методами», а не «функциями»;
+Вывод осуществляется с помощью System.out
+out.println, System.out.print;
+Модификаторы доступа — default, public, protected, private.
+
+Прочие модификаторы — final, abstract, strictfp.
+ видимый в пакете (доступ по умолчанию, который работает при отсутствии модификатора);
+— видимый лишь внутри класса (private);
+— видимый для всех без исключения (public);
+— видимый как для пакета, так и для и всех подклассов (protected).
+void  -  функция
+-------
+public class HelloWorld HelloWorld {
+  public static void main (String [] args) {
+    System.out.println («Hello, world.»);
+  }
+}
+-------
+int count;      // Объявление неинициализированной переменной с именем  'count', тип переменной 'int'
+count = 35;     // Инициализация переменной
+int count = 35;
+-----переменные---
+void doSomething () {
+    int a;
+    {
+        int b;
+        a = 1;
+    }
+    a = 2;
+    b = 3; // Недопустимо, потому что переменная b объявлена во внутренней области.
+}
+-----функция-----
+
+if(Логическое выражение)
+{
+   //Выполняется, если истинно
+} else{
+   //Выполняется, если ложно
+}
+
+-----
+for(int i = 0; i < 5; i = i + 2) {
+   System.out.println(i);
+}
+-----
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+-----
+Sample.fun();
+-----
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars[0]);
+-----
+cars.length
+-----
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+-----
+String txt = "Hello World";
+System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // Outputs "hello world"
+
+-----
+
+
+
+
+
+
+

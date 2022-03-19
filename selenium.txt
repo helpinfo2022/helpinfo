@@ -1,0 +1,16 @@
+driver.execute_script("window.scrollTo(0, 1080)")
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+----прокрутить вниз страницу----
+driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.END)
+----клавиши клавиатуры использовать а так же вниз опускается----
+x = driver.find_element_by_link_text("פוליטי").location
+----получить расположение обьекта-----
+
+//li[@id='tns1-item2']//span[1] 
+//li[@id='tns1-item2']//span[1]
+//li[@id='tns1-item5']/a[1]/span[1]
+
+//ul[@id='tns1']/li[9]/a[1]/span[1]
+//li[@id='tns1-item7']//span[1]
+//*[@id="tns1-item5"]/a/span
+/html/body/header/div/div/div[2]/ul/li[6]/a/span

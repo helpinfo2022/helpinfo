@@ -1,0 +1,87 @@
+SQUID - HTTP, HTTPS- 443 , FTP 21  
+TINYPROXY - простой легкий HTTP и HTTPS веб интерфейс
+3PROXY -  HTTP, HTTPS, FTP и SOCKS для каждого протокола можно настроить и запустить отдельный сервис
+
+INSERT INTO `lesson`.`dolzhnost` (`id_dolzhnost`, `name_dolzhnost`, `Oklad`) VALUES (2, 'Menager', 10000);"
+----
+HTTP-прокси ...
+HTTPS и SSL прокси ...
+SOCKS-прокси ...
+CGI прокси (анонимайзеры) помогают открыть любой веб-сайт прямо в браузере
+
+
+Отличие SOCKS 4 от SOCKS 5 состоит в том, что SOCKS 5 имеет поддержку сетевого протокола UDP
+для анонимности
+
+Sudo apt-get update
+netstat –tnlp
+
+ARP -net
+
+UNUNTU 18-20
+RDP VNC    ANYDESK TEAMVIEWER
+
+sudo systemctl reboot
+/var/log/wtmp или /var/log/utmp - системные логи Linux
+
+ wtmp вы можете узнать кто и когда вошел в систему
+BASH - SHELL - командная строка  22 порт
+=====
+os.system()
+import os
+
+os.system("echo Hello from the other side!")
+
+home_dir = os.system("cd ~")
+print("`cd ~` ran with exit code %d" % home_dir)
+unknown_dir = os.system("cd doesnotexist")
+print("`cd doesnotexis` ran with exit code %d" % unknown_dir)
+======
+ls что есть внутри    ls можно передавать не только имена каталогов, но и файлов
+mysql -h 127.0.0.1 -u root -p  
+show databases;
+use jeka
+show tables;
+show create table table_name;
+show processlist;
+========
+ps -aux --sort -pcpu            проверка ресурсов компа всех потреблений
+top   тоже самое
+vmstat
+====
+sudo apt install htop  установить
+kill 25609  убрать процесс по пиду в программе
+killall gcalctool по названи
+rmdir [опция] НазваниеПапки  удаление папки
+====
+Sudo shutdown -h now    перезагрузка
+Sudo reboot
+Традиционно логи в Linux хранятся в директории /var/log
+sudo dmesg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+SELECT `applications`.`app_id`, `applications`.`app_name`, `Publishers`.`pub_name`, `applications`.`app_platform_name` FROM `applications` INNER JOIN `Publishers` ON `applications`.`app_pub_id` = `Publishers`.`pub_id`
+
+SELECT `Click` FROM `Application_statistics` WHERE `Date` = CURDATE() AND `Country` == `USA` - SELECT `Click` FROM `Application_statistics` WHERE `Date` = SUBDATE(CURDATE(), INTERVAL 7 DAY) AND `Country` == `USA`
+
+SELECT Publishers.pub_name App_data.impressions, App_data.clicks FROM  App_data INNER JOIN applications ON App_data.app_id = applications.app_id Inner JOIN Publishers ON Publishers.pub_id = applications.pub_id WHERE  date >= SUBDATE(CURDATE(), INTERVAL 7 day)  GROUP  BY Publishers.pub_name;
+
+
+
+
+SELECT PostalCode FROM [Customers] WHERE City = 'Elgin'
+
+SELECT COUNT(*) FROM [Employees] WHERE MONTH(BirthDate) = 9
+
+SELECT COUNT(Country) FROM [Suppliers] GROUP BY Country HAVING COUNT(SupplierID) = 1
+
+SELECT CategoryID, AVG(Price) FROM [Products] GROUP BY CategoryID HAVING AVG(Price)
+
+SELECT SupplierID, COUNT(ProductID) FROM [Products] GROUP BY SupplierID HAVING COUNT(ProductID)
+
+SELECT OrderID FROM [OrderDetails] where Quantity = (SELECT MAX(Quantity) FROM [OrderDetails])

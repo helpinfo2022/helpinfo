@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Welcome to my DB</h2>
+
+<hr>
+
+<form action="/db_add" method="POST">
+  ADD to DB<br>
+  ID:<br>
+  <input type="text" name="id" value="User">
+  <br><br>
+  Name:<br>
+  <input type="text" name="name" value="Pass">
+  <br><br>
+   IP:<br>
+  <input type="text" name="ip" value="Pass">
+  <br><br>
+   Phone:<br>
+  <input type="text" name="phone" value="Pass">
+  <br><br>
+  <input type="submit" value="Send">
+</form>
+<hr>
+  <form action="/filter_id" method="POST">
+  Filter by ID
+  <input type="text" name="id" value="id">
+  <br><br>
+  <input type="submit" value="Search">
+ </form>
+<hr>
+  <form action="/filter_name" method="POST">
+  Filter by Name
+  <input type="text" name="name" value="id">
+  <br><br>
+  <input type="submit" value="Search">
+</form>
+<hr>
+  <form action="/filter_ip" method="POST">
+  Filter by IP
+  <input type="text" name="ip" value="id">
+  <br><br>
+  <input type="submit" value="Search">
+</form>
+<hr>
+  <form action="/filter_phone" method="POST">
+  Filter by PHONE
+  <input type="text" name="phone" value="id">
+  <br><br>
+  <input type="submit" value="Search">
+</form>
+<hr>
+
+
+</body>
+</html>

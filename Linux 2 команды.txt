@@ -1,0 +1,54 @@
+https://github.com/helpinfo2022/helpinfo
+
+https://kubuntu.ru/node/4343
+MobaXterm
+---
+https://chrome.google.com/webstore/detail/mouse-tooltip-translator/hmigninkgibhdckiaphhmbgcghochdjc
+
+Mouse Tooltip Translator
+---
+https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb
+---
+
+
+где днс записи находятся  - /etc/resolf.conf
+интерфейс посмотреть - /etc/network/interfaces
+/bin   системная папка   /boot  загрузчик   /dev  устройства   /lib ядро библиотеки
+/mnt  устройства память   /lost+found  востановленные части системы
+/proc доступ к информации ядра процессора инфо   /usr каталог программ  /usr/src
+/proc/meminfo память   /proc/net сетевые протоколы  /var лог кэш файлы
+/etc/apt/sources.list   список пакетов для установки
+sudo apt list --installed
+скрытые файлы  ls -a
+useradd - добавление нового пользователя
+sudo passwd admin - новй пароль
+userdel параметры пользователь  -r, --remove дома каталог -f, --force 
+passwd --lock пользователь    блокировка
+cat /etc/passwd  - посмотреть пользователей
+cut -d: -f1 /etc/passwd - только имена пользователей
+w   активных пользователей посмотреть
+home - папка с пользователями
+включить рут -  sudo -i. sudo -s
+cd ..  назад по каталогу   cd ../.. на два уровня   cd ~ домашняя папка
+cp file newfile   копирование
+ln -s /home/user/Downloads/ /home/user/test/   - ссылка
+chmod +x  script.sh права доступа добавить    chmod -x script.sh
+cat = less
+lastlog  лог пользователей
+history -c   удалить историю
+ls -l > /home/jim/dir.txt      >перевод значения
+sudo netplan generate ПРИМЕНЕНИЕ КОНФИГУРАЦИИ NETPLAN после изменений файла
+/etc/network/interfaces   айпи посмотреть
+sudo systemctl restart networking   перезагрузка сети сервисов
+netplan https://habr.com/ru/post/448400/
+
+
+
+
+https://losst.ru/nastrojka-dns-v-ubuntu  НАСТРОЙКА DNS ЧЕРЕЗ ТЕРМИНАЛ UBUNTU
+ 
+
+
+
+
+

@@ -1,0 +1,44 @@
+C:\Program Files\MySQL\MySQL Server 8.0\bin
+----
+mysql -h 127.0.0.1 -u root -p
+----
+cd C:\Program Files\MySQL\MySQL Server 8.0\bin
+mysql -h 127.0.0.1 -u root -p
+
+SHOW DATABASES;
+USE humanz;
+mysql -u root -h 127.0.0.1 humanz -p
+SHOW TABLES;
+SHOW TABLES FROM humanz;
+SHOW COLUMNS FROM table_name;
+SHOW COLUMNS FROM new_table;
+SHOW COLUMNS FROM table_name FROM db_name;
+SHOW PROCESSLIST;   Показать список выполняющихся в настоящий момент запросов.
+
+SHOW GRANTS FOR user_name FROM db_name;   Показать список прав пользователя user
+CREATE USER 'user'@'host' IDENTIFIED BY'password'; Создать нового пользователя
+
+SET PASSWORD FOR 'user'@'localhost' = PASSWORD('new_password'); Изменить пароль пользователя в консоли 
+
+SHOW PROCESSLIST; Показать список выполняющихся в настоящий момент запросов.
+
+SHOW STATUS; Общая статистика MySQL.
+
+
+SELECT * FROM `humanz`.`new_table` WHERE `id` = '777';
+SELECT * FROM `humanz`.`new_table` WHERE `id` = '777' <= @last_week;
+SELECT * FROM `humanz`.`new_table` `id` <= @last_week ;
+
+SELECT IF(500<1000, "YES", "NO");
+SELECT OrderID, Quantity, IF(Quantity>10, "MORE", "LESS")
+
+SELECT @var_any_var_name
+SET @start = 1, @finish = 10;    
+SET @var := value
+
+SELECT ... WHERE col <= @last_week;
+
+
+
+
+
