@@ -1,0 +1,104 @@
+https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started
+---
+https://learn.hashicorp.com/tutorials/terraform/azure-build?in=terraform/azure-get-started
+---
+https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2#msi
+
+https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-7.3.2
+Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Forc
+
+$ az login
+az account show
+
+
+az account set --subscription "ffc5f0ce-4bdc-4074-b9e0-681f4a3855ff"
+
+az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/ffc5f0ce-4bdc-4074-b9e0-681f4a3855ff"
+
+---
+
+{
+  "appId": "d21c8a50-cb8c-4f6b-b685-cf2ce7e97d34",
+  "displayName": "azure-cli-2022-03-21-12-38-45",
+  "password": "eOd6T1CcZWC5GR5pKhoAfK.uZl55yp~otZ",
+  "tenant": "e8475131-c61c-450b-a1ed-502b57e7e956"
+}
+
+
+$ $Env:ARM_CLIENT_ID = "d21c8a50-cb8c-4f6b-b685-cf2ce7e97d34"
+$ $Env:ARM_CLIENT_SECRET = "eOd6T1CcZWC5GR5pKhoAfK.uZl55yp~otZ"
+$ $Env:ARM_SUBSCRIPTION_ID = "ffc5f0ce-4bdc-4074-b9e0-681f4a3855ff"
+$ $Env:ARM_TENANT_ID = "e8475131-c61c-450b-a1ed-502b57e7e956"
+
+
+---
+New-Item -Path "c:\" -Name "learn-terraform-azure" -ItemType "directory"
+
+===
+
+main.tf
+
+===
+
+# Configure the Azure provider
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 2.65"
+    }
+  }
+
+  required_version = ">= 1.1.0"
+}
+
+provider "azurerm" {
+  features {}
+}
+
+resource "azurerm_resource_group" "rg" {
+  name     = "myTFResourceGroup"
+  location = "westus2"
+}
+
+===
+
+
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+
+====
+установка терраформ
+
+choco install terraform
+
+====
+
+
+terraform -help
+terraform -help plan
+====
+
+
+terraform init
+
+terraform fmt
+
+terraform validate
+====
+terraform show
+terraform state list
+terraform state        
+
+=====
+ttps://kb.selectel.ru/docs/cloud/servers/tools/use-terraform/
+
+https://registry.terraform.io/providers/hashicorp/azurerm/latest
+
+https://docs.microsoft.com/en-us/azure/developer/terraform/create-linux-virtual-machine-with-infrastructure
+
+====
+
+
+

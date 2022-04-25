@@ -1,0 +1,97 @@
+
+
+====
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-18-04-ru
+
+
+export ANSIBLE_HOST_KEY_CHECKING=False
+
+ssh-keygen
+
+ls .ssh/
+
+ansible-playbook playbook.yml -i inventory.ini
+
+resource "azurerm_subnet" "DB-tier" {
+  name                 = "DB-tier"
+  resource_group_name  = azurerm_resource_group.vnet.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
+  address_prefixes     = ["10.0.2.0/24"]
+  service_endpoints    = ["Microsoft.Storage"]
+  delegation {
+    name = "fs"
+    service_delegation {
+      name    = "Microsoft.DBforPostgreSQL/flexibleServers"
+      actions = ["Microsoft.Network/virtualNetworks/subnets/join/action", ]
+    }
+  }
+}
+
+
+ansible all -i inventory.ini -u root -m ping
+
+
+ansible-inventory --list -y
+
+ansible all -m ping -u root
+
+ansible servers -a "uptime" -u root
+
+npm run initdb
+
+
+
+output "nic_id_list" {
+  value = module.vm_app.*.nic_ids.id
+}
+
+azurerm_storage_account
+
+
+output "nic_id_list" {
+  value = module.vm_app.*.nic_ids.id
+}
+
+
+curl ifconfig.me
+
+
+====
+
+sudo apt update
+
+sudo apt install python3.8
+sudo apt install ansible
+
+git init
+git pull https://github.com/asiamegic/terraform/blob/master/playbook.yml
+
+===
+sudo apt update
+
+sudo apt install python3.8
+sudo apt install ansible
+sudo apt install sshpass
+
+
+ansible -i inventory.ini -m ping staging
+ansible-playbook playbook.yml -i inventory.ini
+
+ansible-playbook playbook.yaml -i inventory.ini
+
+ansible -i inventory.ini -m ping all
+ansible-playbook playbook.yml -i inventory.ini
+
+ansible-playbook play3.yml -i inventory.ini
+
+
+====
+
+
+
+
+====
+
+=====
+
+

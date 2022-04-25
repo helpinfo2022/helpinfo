@@ -1,0 +1,252 @@
+
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install docker-ce -y
+
+
+sudo su
+systemctl start docker
+systemctl enable docker
+systemctl restart docker
+
+systemctl status docker
+
+sudo chmod 666 /var/run/docker.sock
+
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+docker login -u artemrafikov -p psv0m63+Ud=fTZ9Pu9/RxpvqNhI41S3I artemrafikov.azurecr.io
+
+===
+-azure CLI install
+https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt
+===
+
+
+docker run -d redis
+
+docker ps
+
+===
+docker load -i path to tar
+docker run -it
+docker commit
+docker save
+===
+
+sudo systemctl start docker
+
+
+commited
+
+docker load -i commited.tar to tar
+
+===
+docker images   посмотреть все образы на компе
+
+docker pull centos  скачать контейнер
+
+docker search поиск контейнеров
+
+
+
+docker run hello-world    - тест докера
+sudo docker run --name test my_image      - запуск контейнера
+
+sudo su
+systemctl start docker
+systemctl enable docker
+systemctl restart docker
+
+systemctl status docker
+
+===
+https://selectel.ru/blog/docker-install-ubuntu/
+команды
+https://help.reg.ru/hc/ru/articles/4408047640977-%D0%9A%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-Docker-%D0%BD%D0%B0-Ubuntu
+===
+https://artemrafikov.azurecr.io/
+
+https://www.youtube.com/watch?v=5D6EWAHwU9M       ACR
+docker login
+docker build .
+
+6ffe1243ca1d
+sudo docker build -t my_image .  создание образа
+sudo docker build -t app_image7 .
+docker tags
+
+docker push adress   закачать на сервер
+
+sudo docker container ls -a     - посмотреть все запущенные контейнеры
+ /var/lib/docker/volume    - внешнее хранилище докер
+sudo docker run --name=test --mount source=selectel,destination=/selectel my_image
+из образа переносил в папку волум папку селект
+
+uotbrain
+
+
+docker run -it ubuntu(имя)    запустить контейнер и устанавливать в него
+docker ps -l    вывести последний контейнер
+docker stop d034b794a3bf    остановить конейнер
+docker attach d034b794a3bf   - подключиться к контейнеру
+docker rm d034b794a3bf удалить контейнер
+
+
+docker pull <image name>  - скачать с докер хаб
+docker search ubuntu   поиск образа по докер хаб
+
+https://losst.ru/ustanovka-docker-na-ubuntu-16-04    - список команд докера
+
+ 
+===
+докер файл для создания образа имэйдж
+
+FROM ubuntu
+MAINTAINER selectel
+RUN apt-get update
+CMD ["echo", "Hello World"]
+
+
+https://github.com/asiamegic/weight-tracker.git
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt install docker.io
+systemctl start docker
+systemctl enable docker
+
+artemrafikov.azurecr.io
+
+registry
+
+az login
+az acr login --name myregistry
+
+az acr login --artemrafikov.azurecr.io
+
+sudo docker run --rm -it -p 8080:80 nginx:stable-alpine
+
+====
+
+ dockerRegistryServiceConnection: 'c4517051-90b6-48eb-8838-bbad4c62bd9d'
+  imageRepository: 'artemimage'
+  containerRegistry: 'artemrafikov.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  tag: '$(Build.BuildId)'
+
+
+sudo chmod 666 /var/run/docker.sock
+
+
+
+- name: kill previous docker
+      shell: |
+        if  [ $( docker ps -aq | wc -w ) -gt 0 ]; then
+         docker rm -f $(docker ps -aq)
+         docker rmi $(docker images -q)
+        fi
+
+
+===
+docker ps -a  все контейнеры
+
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)     удаление контейнеров
+
+docker system prune   все контейнеры вырубить
+docker system prune -a    все удаляет
+
+docker images -a  
+docker rmi ubuntu   удаление образов
+
+docker exec -it <container_id> bash   зайти внутри контейнера
+
+docker exec -it 6c31c6f3c7b2 bash
+
+
+docker run -d 964e3289c188 -p 8080:8080
+
+
+
+964e3289c188
+
+21af60909029
+
+
+docker run -d --restart=always -p 8080:8080 --name weighttracker   -e  
+
+docker run -d --restart=always -p 8080:8080 docker run -p 8080:8080 artemrafikov.azurecr.io/artemimage:Staging
+
+docker exec –it 0b631cecf1cb /bin/bash
+
+
+docker exec –it dazzling_nightingal /bin/bash
+
+docker exec –it --user root 0b631cecf1cb /bin/bash
+
+docker inspect 0b631cecf1cb 
+docker run -it 201b8b754dd2 /bin/sh     зайти в  докер внутрь
+====
+
+artemrafikov
+
+artemrafikov.azurecr.io
+
+psv0m63+Ud=fTZ9Pu9/RxpvqNhI41S3I
+
+aV1r3Tn3fdWOkLHK3MUlchesGDZCWz6=
+
+ansible-playbook playbook.yml -i inventory.ini
+
+ansible -i inventory.ini -m ping servers
+ansible-playbook playbook.yml -i inventory.ini
+
+ansible-playbook weightTrackerPlayBook.yaml -i inventory.ini
+weightTrackerPlayBook
+
+
+artemimage
+
+--name artem   имя контейнеру в начале
+
+
+
+docker run -d -p 8080:8080 -e PGHOST=$(bd_host) -e PORT=8080    -e  HOST=0.0.0.0  -e PGUSERNAME=postgres  -e PGDATABASE=postgres   -e  PGPASSWORD=$(bd_pass)  -e  PGPORT=5432   -e HOST_URLL=HOST_URL=http://$(host_ip_public):8080   -e COOKIE_ENCRYPT_PWD=superAwesomePasswordStringThatIsAtLeast32CharactersLong!   -e  NODE_ENV=development   -e  OKTA_ORG_URL=https://dev-87322128.okta.com   -e  OKTA_CLIENT_ID=$(okta_id)   -e OKTA_CLIENT_SECRET=$(okta_secret) ov.azurecr.io/artemimage:latest
+
+
+
+-----
+staging
+http://20.228.128.122:8080/
+-----
+production
+http://20.127.128.234:8080/
+
+
+===================
+
+
+
+Run the containers by using 
+
+docker run -d --restart=always --name weighttracker -p 8080:8080 -e <your-environment-variables> $(containerRegistry)/$(imageRepository):$(tag)
+
+
+====
+docker network ls
+docker top 7786807d8084
+docker attach <container>
+docker logs --follow --tail 10 7786807d8084
+
+sudo docker commit <container-id>
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+=====
+
+
+=====
+
+
